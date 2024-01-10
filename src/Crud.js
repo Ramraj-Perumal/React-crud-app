@@ -98,7 +98,7 @@ export const Crud = () => {
       <Container fluid style={{marginTop:"10px"}}>
       <Row>
         <Col className='col-12 col-sm-6 col-md-12 col-lg-12'>
-      <button className='btn1' onClick={()=>createData()}>Add user <IoMdPersonAdd /></button>
+      <button className='btn1' onClick={()=>createData()}>Add user <IoMdPersonAdd style={{marginLeft:"5px", marginTop:"5px"}}/></button>
       </Col>
       </Row>
       <Row>
