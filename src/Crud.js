@@ -4,6 +4,7 @@ import { FiEdit  } from 'react-icons/fi';
 import { AiFillDelete } from "react-icons/ai";
 import Model from './Model';
 import { IoMdPersonAdd } from "react-icons/io";
+import { Col, Container, Row } from 'react-bootstrap';
 
 export const Crud = () => {
 
@@ -93,8 +94,15 @@ export const Crud = () => {
 
   return (
     <>
-      <h1>CRUD APP</h1>
+      <h1 style={{textAlign:"center"}}>CRUD APP</h1>
+      <Container fluid style={{marginTop:"10px"}}>
+      <Row>
+        <Col className='col-12 col-sm-6 col-md-12 col-lg-12'>
       <button className='btn1' onClick={()=>createData()}>Add user <IoMdPersonAdd /></button>
+      </Col>
+      </Row>
+      <Row>
+      <Col className='col-12 col-sm-6 col-md-12 col-lg-12'>
       <Table striped bordered hover variant="dark">
         <thead>
           <tr>
@@ -126,7 +134,14 @@ export const Crud = () => {
           ))}
         </tbody>
       </Table>
+      </Col>
+      </Row>
+      <Row>
+      <Col className='col-12 col-sm-6 col-md-12 col-lg-12'>
       <Model modelShow = {show} modelClose = {handleClose} modalData = {temp} setModalData = {setTemp} modalStatus = {status} modalSetStatus = {setStatus}/>
+      </Col>
+      </Row>
+      </Container>
     </>
   )
 }

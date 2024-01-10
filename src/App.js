@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import './App.css';
 import { Crud } from './Crud';
 import 'bootstrap/dist/css/bootstrap.min.css';
